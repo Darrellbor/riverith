@@ -14,6 +14,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CreatepoliticianComponent } from './createpolitician/createpolitician.component';
 import {MatFormFieldModule} from '@angular/material';
 import { MatDatepickerModule, MatNativeDateModule } from '@angular/material';
+import { CreateFeedbackComponent } from './create-feedback/create-feedback.component';
+import { CreatePromisesComponent } from './create-promises/create-promises.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MatDatepickerModule, MatNativeDateModule } from '@angular/material';
     SlidesComponent,
     SignUpComponent,
     RegisterComponent,
-    CreatepoliticianComponent
+    CreatepoliticianComponent,
+    CreateFeedbackComponent,
+    CreatePromisesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,20 +1,19 @@
+.login-container{
+    min-height: 300px;
+    margin-top: 70px;
+}
 .loginbox{
     width: 1000px;
     height: 700px;
     color: grey;
-    padding-top: 700px;
-    left: 50%;
+    padding-top: 400px;
+    padding-left: 550px;
     position: absolute;
     transform: translate(-50%,-50%);
     box-sizing: border-box;
 }
 .form-control{
     margin-top: 40px;
-}
-.form-container{
-    border: 1px solid white;
-    padding: 30px 40px;
-    margin-top: 10vh;
 }
 .logintext{
     padding-top: -40px;
