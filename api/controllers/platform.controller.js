@@ -396,13 +396,28 @@ module.exports.getbottomCtrl = (req, res, next) => {
 module.exports.searchPlatformCtrl = (req, res, next) => {
   console.log("search platform by politician name");
   let error;
-  let search;
+  let searchId = req.params.id;
 
-  if (req.query && req.query.search) {
-    search = req.query.search;
-  }
+  Platform.findById(searchId)
+    .sort("-rating")
+    .exec((err, records) => {
+      if (err) {
+        error = new Error("An error occured!");
+        next(error);
+        return;
+      } else {
+        res.status(200).json({
+          records: records
+        });
+      }
+    });
+};
 
-  Platform.find({ "politician.name.first": { $regex: search } })
+module.exports.getAllCtrl = (req, res, next) => {
+  console.log("Get all politicians");
+  let error;
+
+  Platform.find()
     .sort("-rating")
     .exec((err, records) => {
       if (err) {

@@ -1,5 +1,67 @@
-#searchbar{
-    float : left;
-    margin-top: -200px;
-    margin-left : -90px;
+.feeds {
+  min-height: 300px;
+  margin-top: 70px;
+}
+
+.search-bar {
+  margin-left: 70px;
+
+  & input {
+    background: #fdfdfd;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid;
+    width: 70%;
+    padding: 8px;
+    margin-top: -100px;
+  }
+}
+
+.politician-box {
+  background: linear-gradient(180deg, #9cb2d8 0%, #6762b1 100%);
+  padding: 20px;
+  margin-left: 70px;
+  max-width: 250px;
+  color: #fff;
+}
+
+.politician-image {
+  background: #ffffff;
+  border: 1px solid #5f65b5;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+
+  & img {
+    max-width: 150px;
+  }
+}
+
+.politician-proceed {
+  button {
+    background: linear-gradient(
+      228.67deg,
+      rgba(91, 103, 183, 0.71) 16.28%,
+      rgba(103, 98, 177, 0) 61.63%
+    );
+    color: #fff;
+  }
+}
+
+.content-item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ffff;
+}
+
+.promises-section {
+  border: 1px solid #cacedf;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+
+  & img {
+    max-width: 150px;
+  }
 }

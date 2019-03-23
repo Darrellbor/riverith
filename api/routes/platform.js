@@ -53,6 +53,8 @@ router.route("/top").get(platformCtrl.getTopCtrl);
 
 router.route("/bottom").get(platformCtrl.getbottomCtrl);
 
-router.route("/search").get(platformCtrl.searchPlatformCtrl);
+router.route("/search/:id").get(platformCtrl.searchPlatformCtrl);
+
+router.route("/all").get(platformCtrl.getAllCtrl);
 
 module.exports = router;
