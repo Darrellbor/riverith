@@ -1,28 +1,34 @@
 <div class="background">
-    <div class="main-page">
-        <img src="/assets/Images/Screen Shot 2019-03-22 at 8.59.svg"/>
-        <div class="container float-right">
-            <img class="float-right" src="/assets/Images/Group.svg"/>
-            <div class="nav-menu">
-             <app-navigation></app-navigation>
-            </div>
+  <div class="main-page">
+    <a routerLink="/">
+      <img src="/assets/Images/riverithLogo.svg" />
+    </a>
+    <div class="container float-right">
+      <img class="float-right" src="/assets/Images/Group.svg" />
+
+      <div class="nav-menu">
+        <app-navigation></app-navigation>
+      </div>
+    </div>
+  </div>
+  <div class="body">
+    <section class="rw-wrapper">
+      <h2 class="rw-sentence">
+        <span>Justice </span>
+        <div class="rw-words rw-words-2">
+          <span>is blind</span>
+          <span>is truth in action</span>
+          <span>for one</span>
+          <span>for all</span>
         </div>
+      </h2>
+    </section>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="bottomIcon float-left">
+    <img src="/assets/Images/Rectangle.svg" />
+    <div class="text">
+      All rights reserved &copy; Riverith 2019
     </div>
-    <div class="body">
-            <section class="rw-wrapper">
-                    <h2 class="rw-sentence">
-                        <span>Justice </span>
-                        <div class="rw-words rw-words-2">
-                            <span>is blind</span>
-                            <span>is truth in action</span>
-                            <span>for one</span>
-                            <span>for all</span>
-                        </div>
-                    </h2>
-            </section>
-            <router-outlet></router-outlet>
-    </div>
-    <div class="bottomIcon float-left">
-            <img src="/assets/Images/Rectangle.svg"/>
-    </div>
+  </div>
 </div>
