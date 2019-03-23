@@ -1,0 +1,43 @@
+.login-container{
+    min-height: 300px;
+    margin-top: 70px;
+}
+.loginbox{
+    width: 1000px;
+    height: 700px;
+    color: grey;
+    padding-top: 400px;
+    padding-left: 550px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+}
+.form-control{
+    margin-top: 40px;
+}
+.logintext{
+    padding-top: -40px;
+    color: grey;
+    text-align: left;
+}
+.btn{
+    background: rgb(85, 0, 85);
+}
+.form-group input[type="email"], input[type="password"]{
+    padding-left:40px;
+}
+.form-group{
+    position: relative;
+}
+.form-group i{
+    position: absolute;
+    left: 0;
+    top: 5px;
+    padding: 9px 8px;
+}
+.forgotpass{
+    text-align: center;
+}
+.forgotpass a{
+    color : purple;
+}
