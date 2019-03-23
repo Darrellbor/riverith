@@ -125,6 +125,10 @@ const feedbackSchema = new mongoose.Schema({
 });
 
 const platformSchema = new mongoose.Schema({
+  rating: {
+    type: Number,
+    default: 0
+  },
   politician: [politicianSchema],
   feedback: [feedbackSchema],
   promise: [promisesSchema]

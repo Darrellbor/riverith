@@ -49,4 +49,10 @@ router
   .route("/feedback/:id/downvote/:feedbackId")
   .patch(platformCtrl.feedbackDownvoteCtrl);
 
+router.route("/top").get(platformCtrl.getTopCtrl);
+
+router.route("/bottom").get(platformCtrl.getbottomCtrl);
+
+router.route("/search").get(platformCtrl.searchPlatformCtrl);
+
 module.exports = router;
