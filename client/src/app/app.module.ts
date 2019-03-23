@@ -12,6 +12,8 @@ import { RegisterComponent } from './register/register.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CreatepoliticianComponent } from './createpolitician/createpolitician.component';
+import {MatFormFieldModule} from '@angular/material';
+import { MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,10 @@ import { CreatepoliticianComponent } from './createpolitician/createpolitician.c
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
