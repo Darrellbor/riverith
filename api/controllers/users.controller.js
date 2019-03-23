@@ -96,7 +96,7 @@ module.exports.loginCtrl = (req, res, next) => {
               _id: user._id,
               name: user.name,
               email: user.email,
-              profilePic: user.profilePic
+              username: user.username
             },
             db_config.secret,
             { expiresIn: 604800 }
@@ -112,7 +112,7 @@ module.exports.loginCtrl = (req, res, next) => {
               _id: user._id,
               name: user.name,
               email: user.email,
-              profilePic: user.profilePic
+              username: user.username
             },
             db_config.secret,
             { expiresIn: 3600 }
