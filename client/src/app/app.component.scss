@@ -1,0 +1,80 @@
+.background{
+    height:80rem;
+    bottom: 0%;
+    top: 0%;
+    width: 100%;
+}
+.bottomIcon{
+   padding-top: 100rem;
+    position: absolute; 
+}
+.container{
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 0%;
+    width: 100%;
+}
+.nav-menu{
+    position: absolute;
+    margin: 20px;
+    width: auto;
+    padding-left: 450px;
+}
+.icon-image{
+    padding-left: 750px;
+    
+}
+.rw-wrapper{
+	width: 80%;
+	position: relative;
+	margin-right: 30px;
+	font-family: 'Bree Serif';
+    padding-left: 70px;
+    padding-top: 120px;
+}
+.rw-sentence span{
+	color: #444;
+    white-space: nowrap;
+    padding-top: 0px;
+	font-size: 200%;
+	font-weight: normal;
+}
+.rw-words{
+	display: inline;
+	text-indent: 10px;
+}
+.rw-words span{
+	position: absolute;
+	opacity: 0;
+	overflow: hidden;
+	width: 100%;
+	color: purple;
+}
+.rw-words-2 span{
+	animation: rotateWordsSecond 18s linear infinite 0s;
+}
+.rw-words span:nth-child(2) { 
+	animation-delay: 3s; 
+	color: purple;
+}
+.rw-words span:nth-child(3) { 
+	animation-delay: 6s; 
+	color: purple;	
+}
+.rw-words span:nth-child(4) { 
+	animation-delay: 9s; 
+	color: purple;
+}
+@keyframes rotateWordsFirst {
+    0% { opacity: 1; animation-timing-function: ease-in; height: 0px; }
+    8% { opacity: 1; height: 60px; }
+    19% { opacity: 1; height: 60px; }
+	25% { opacity: 0; height: 60px; }
+}
+@keyframes rotateWordsSecond {
+    0% { opacity: 1; animation-timing-function: ease-in; width: 0px; }
+    10% { opacity: 0.3; width: 0px; }
+	20% { opacity: 1; width: 100%; }
+    27% { opacity: 0; width: 100%; }
+}
