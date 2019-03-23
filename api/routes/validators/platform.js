@@ -45,12 +45,12 @@ module.exports.promiseValidate = [
 ];
 
 module.exports.feedbackValidate = [
-    body("description")
-      .not()
-      .isEmpty()
-      .withMessage("Please fill in a brief description of your feedback")
-    body("rating")
-      .not()
-      .isEmpty()
-      .withMessage("Please fill in a rating score for your feedback")
-  ];
+  body("description")
+    .not()
+    .isEmpty()
+    .withMessage("Please fill in a brief description of your feedback"),
+  body("rating")
+    .not()
+    .isEmpty()
+    .withMessage("Please fill in a rating score for your feedback")
+];

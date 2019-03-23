@@ -249,7 +249,7 @@ module.exports.feedbackCtrl = (req, res, next) => {
   }
 
   Platform.findById(platformId)
-    .select("feedback")
+    .select("feedback rating")
     .exec((err, doc) => {
       if (err) {
         error = new Error("An error occured!");
@@ -261,6 +261,7 @@ module.exports.feedbackCtrl = (req, res, next) => {
         next(error);
         return;
       } else {
+        doc.rating = doc.rating + parseInt(req.body.rating, 10);
         _addFeedback(req, res, doc);
       }
     });
@@ -347,6 +348,70 @@ module.exports.feedbackDownvoteCtrl = (req, res, next) => {
           } else {
             res.status(204).json();
           }
+        });
+      }
+    });
+};
+
+module.exports.getTopCtrl = (req, res, next) => {
+  console.log("Get Top politicians");
+  let error;
+
+  Platform.find()
+    .limit(3)
+    .sort("-rating")
+    .exec((err, records) => {
+      if (err) {
+        error = new Error("An error occured!");
+        next(error);
+        return;
+      } else {
+        res.status(200).json({
+          records: records
+        });
+      }
+    });
+};
+
+module.exports.getbottomCtrl = (req, res, next) => {
+  console.log("Get Bottom politicians");
+  let error;
+
+  Platform.find()
+    .limit(3)
+    .sort("rating")
+    .exec((err, records) => {
+      if (err) {
+        error = new Error("An error occured!");
+        next(error);
+        return;
+      } else {
+        res.status(200).json({
+          records: records
+        });
+      }
+    });
+};
+
+module.exports.searchPlatformCtrl = (req, res, next) => {
+  console.log("search platform by politician name");
+  let error;
+  let search;
+
+  if (req.query && req.query.search) {
+    search = req.query.search;
+  }
+
+  Platform.find({ "politician.name.first": { $regex: search } })
+    .sort("-rating")
+    .exec((err, records) => {
+      if (err) {
+        error = new Error("An error occured!");
+        next(error);
+        return;
+      } else {
+        res.status(200).json({
+          records: records
         });
       }
     });
